@@ -23,7 +23,6 @@ def build_shift_dict(self, shift):
 
     az = "abcdefghijklmnopqrstuvwxyz"
     AZ = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-#    shift = 3
 
     keys = []
     vals_az = []
