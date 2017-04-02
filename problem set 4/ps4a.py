@@ -12,9 +12,6 @@ SCRABBLE_LETTER_VALUES = {
 }
 
 # -----------------------------------
-# Helper code
-# (you don't need to understand this helper code)
-
 WORDLIST_FILENAME = "words.txt"
 
 def loadWords():
@@ -50,12 +47,8 @@ def getFrequencyDict(sequence):
     return freq
 	
 
-# (end of helper code)
-# -----------------------------------
 
-#
 # Problem #1: Scoring a word
-#
 def getWordScore(word, n):
     """
     Returns the score for a word. Assumes the word is a valid word.
@@ -88,9 +81,7 @@ def getWordScore(word, n):
     
     return wscore
 
-#
-# Problem #2: Make sure you understand how this function works and what it does!
-#
+# Problem #2
 def displayHand(hand):
     """
     Displays the letters currently in the hand.
@@ -108,9 +99,7 @@ def displayHand(hand):
              print(letter,end=" ")       # print all on the same line
     print()                             # print an empty line
 
-#
-# Problem #2: Make sure you understand how this function works and what it does!
-#
+# Problem #2
 def dealHand(n):
     """
     Returns a random hand containing n lowercase letters.
@@ -136,9 +125,7 @@ def dealHand(n):
         
     return hand
 
-#
-# Problem #2: Update a hand by removing letters
-#
+# Problem #2
 def updateHand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
@@ -168,9 +155,8 @@ def updateHand(hand, word):
         hand = updated
         
     return hand
-#
-# Problem #3: Test word validity
-#
+
+# Problem #3
 def isValidWord(word, hand, wordList):
     """
     Returns True if word is in the wordList and is entirely
@@ -191,10 +177,8 @@ def isValidWord(word, hand, wordList):
     else:
         return False
        
-#
-# Problem #4: Playing a hand
-#
 
+# Problem #4
 def calculateHandlen(hand):
     """ 
     Returns the length (number of letters) in the current hand.
@@ -234,32 +218,24 @@ def playHand(hand, wordList, n):
       
     """
     
-    # Keep track of the total score
     total = 0
 #    updated = hand.copy()
-    # As long as there are still letters left in the hand:
     while calculateHandlen(hand) > 0:
         # Display the hand
         print("Current hand: ", end = "")
         displayHand(hand)
         # Ask user for input
         word = str(input('Enter word, or a "." to indicate that you are finished: '))
-        # If the input is a single period:
         if word == ".":
-            # End the game (break out of the loop)
             return "Goodbye! Total score: " + str(total) + " points."
             break
-            
-        # Otherwise (the input is not a single period):
+       
         else:
-            # If the word is not valid:
             if isValidWord(word, hand, wordList) == False:
-                # Reject invalid word (print a message followed by a blank line)
+                # Reject invalid word
                 print("Invalid word, please try again.")
                 print()
-            # Otherwise (the word is valid):
             else:
-                # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
                 total += getWordScore(word, n)
                 print(' " ' + str(word) + ' " ' + " earned " + str(getWordScore(word, n)) + " points. Total: " + str(total) + " points")
                 # Update the hand
@@ -268,13 +244,10 @@ def playHand(hand, wordList, n):
                 if all(value == 0 for value in hand.values()):
                     break
                 
-    # Game is over (user entered a '.' or ran out of letters), so tell user the total score
+    # Game is over (user entered a '.' or ran out of letters)
     return "Run out of letters. Total score: " + str(total) + " points."
 
-#
-# Problem #5: Playing a game
-# 
-
+# Problem #5
 def playGame(wordList):
     """
     Allow the user to play an arbitrary number of hands.
@@ -309,9 +282,9 @@ def playGame(wordList):
             else:
                 playHand(deal, wordList, HAND_SIZE)
    
-#
+
 # Build data structures used for entire session and play game
-#
+
 if __name__ == '__main__':
     wordList = loadWords()
     playGame(wordList)
