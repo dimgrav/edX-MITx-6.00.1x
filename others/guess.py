@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
-
-This is a temporary script file.
+Guess the number
 """
 print("Please think of a number between 0 and 100!")
 low = 0
