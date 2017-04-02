@@ -2,10 +2,6 @@ from ps4a import *
 
 #
 # Test code
-# You don't need to understand how this test code works (but feel free to look it over!)
-
-# To run these tests, simply run this file (open up in your IDE, then run the file as normal)
-
 def test_getWordScore():
     """
     Unit test for getWordScore
@@ -23,8 +19,6 @@ def test_getWordScore():
         print("SUCCESS: test_getWordScore()")
 
 # end of test_getWordScore
-
-
 def test_updateHand():
     """
     Unit test for updateHand
@@ -97,7 +91,6 @@ def test_updateHand():
     print("SUCCESS: test_updateHand()")
 
 # end of test_updateHand
-
 def test_isValidWord(wordList):
     """
     Unit test for isValidWord
