@@ -19,8 +19,6 @@ SCRABBLE_LETTER_VALUES = {
 }
 
 # -----------------------------------
-# Helper code
-# (you don't need to understand this helper code)
 
 WORDLIST_FILENAME = "words.txt"
 
@@ -96,8 +94,8 @@ def getWordScore(word, n):
     return wscore
 
 #
-# Problem #2: Make sure you understand how this function works and what it does!
-#
+# Problem #2:
+# Display the hand
 def displayHand(hand):
     """
     Displays the letters currently in the hand.
@@ -115,9 +113,7 @@ def displayHand(hand):
              print(letter,end=" ")       # print all on the same line
     print()                             # print an empty line
 
-#
-# Problem #2: Make sure you understand how this function works and what it does!
-#
+
 def dealHand(n):
     """
     Returns a random hand containing n lowercase letters.
@@ -144,8 +140,8 @@ def dealHand(n):
     return hand
 
 #
-# Problem #2: Update a hand by removing letters
-#
+# Problem #2
+# Update a hand by removing letters
 def updateHand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
@@ -172,8 +168,8 @@ def updateHand(hand, word):
         
     return updated
 #
-# Problem #3: Test word validity
-#
+# Problem #3
+# Test word validity
 def isValidWord(word, hand, wordList):
     """
     Returns True if word is in the wordList and is entirely
@@ -195,8 +191,8 @@ def isValidWord(word, hand, wordList):
         return False
        
 #
-# Problem #4: Playing a hand
-#
+# Problem #4
+# Playing a hand
 
 def calculateHandlen(hand):
     """ 
