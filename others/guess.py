@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Guess the number
+Bisection search
 """
 print("Please think of a number between 0 and 100!")
 low = 0
