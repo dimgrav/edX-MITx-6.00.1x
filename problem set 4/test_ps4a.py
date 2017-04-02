@@ -1,6 +1,5 @@
 from ps4a import *
 
-#
 # Test code
 def test_getWordScore():
     """
