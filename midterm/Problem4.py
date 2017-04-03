@@ -14,7 +14,6 @@ def closest_power(base, num):
     In case of a tie, return the smaller value.
     Returns the exponent.
     '''
-    # Your code here
     assert base > 1, "wrong base input"
     assert num > 0, "wrong num input"
     
