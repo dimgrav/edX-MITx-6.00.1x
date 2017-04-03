@@ -14,7 +14,7 @@ def general_poly(L):
         nums = []
     
         for i in range(len(L), 0, -1):
-#            print(str(L[len(L) - i])+"*10^"+str(i - 1))
+            print(str(L[len(L) - i])+"*10^"+str(i - 1)) # optional print
             nums.append(L[len(L) - i]*(x**(i - 1)))
     
         return sum(nums)
