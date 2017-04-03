@@ -4,11 +4,8 @@ Created on Fri Mar 10 21:38:24 2017
 
 @author: Mitsakos
 """
-
-## DO NOT MODIFY THE IMPLEMENTATION OF THE Person CLASS ##
 class Person(object):
     def __init__(self, name):
-        #create a person with name name
         self.name = name
         try:
             firstBlank = name.rindex(' ')
@@ -17,15 +14,12 @@ class Person(object):
             self.lastName = name
         self.age = None
     def getLastName(self):
-        #return self's last name
         return self.lastName
     def setAge(self, age):
-        #assumes age is an int greater than 0
-        #sets self's age to age (in years)
+        #assumes age is an int greater than 0        
         self.age = age
     def getAge(self):
         #assumes that self's age has been set
-        #returns self's current age in years
         if self.age == None:
             raise ValueError
         return self.age
