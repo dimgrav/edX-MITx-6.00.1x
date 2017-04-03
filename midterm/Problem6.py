@@ -11,8 +11,6 @@ def deep_reverse(L):
     reverses the order of the int elements in every element of L. 
     It does not return anything.
     """
-    # Your code here
-   
     if len(L) == 1:
         for i in range(len(L)):
             L[i].reverse()
